@@ -1,17 +1,296 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Program kerja osis Nesaba</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>OSIS Nesaba - Website Resmi Organisasi Siswa SMPN 01 Banjarharjo</title>
+        <meta name="description"
+            content="Portal resmi OSIS Nesaba (SMPN 01 Banjarharjo). Temukan informasi program kerja, galeri kegiatan, dan sampaikan aspirasimu untuk sekolah yang lebih maju.">
+        <meta name="keywords"
+            content="OSIS Nesaba, SMPN 01 Banjarharjo, Organisasi Sekolah, Banjarharjo, Brebes, Website OSIS">
+        <meta name="author" content="Deryl">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="OSIS Nesaba - Bergerak Bersama untuk Sekolah">
+        <meta property="og:description"
+            content="Cek program kerja dan dokumentasi seru kami di website resmi OSIS Nesaba!">
+        <title>OSIS Nesaba - SMPN 01 Banjarharjo | Inovatif & Inspiratif</title>
+        <meta name="description"
+            content="Website resmi OSIS Nesaba (SMPN 01 Banjarharjo). Informasi program kerja, dokumentasi kegiatan, dan pusat aspirasi siswa.">
+        <meta name="keywords" content="OSIS Nesaba, SMPN 01 Banjarharjo, Nesaba, Banjarharjo, OSIS Brebes">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <meta property="og:image" content="img/osis.webp">
+
+    </head>
 
 <body>
 
-    <section class="proker" id="program">
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">OSIS <span>NESABA</span></a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link">Beranda</a></li>
+                <li><a href="#profil" class="nav-link">Profil</a></li>
+                <li><a href="pages/programkerja.html" class="nav-link">Program Kerja</a></li>
+                <li><a href="#galeri" class="nav-link">Galeri</a></li>
+                <li><a href="#kontak" class="nav-cta">Hubungi Kami</a></li>
+            </ul>
+
+            <div class="nav-hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home reveal">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Wujudkan Aspirasi, <br><span>Bangun Prestasi</span></h1>
+                <p class="hero-description">
+                    Selamat datang di platform resmi OSIS. Mari bersama-sama menciptakan lingkungan sekolah yang
+                    inovatif, kreatif, dan penuh semangat kolaborasi.
+                </p>
+                <div class="hero-btns">
+                    <a href="#program" class="btn-primary">Lihat Program</a>
+                    <a href="#profil" class="btn-secondary">Tentang Kami</a>
+                </div>
+            </div>
+
+            <div class="hero-image-container">
+                <div class="slider">
+                    <div class="slide active">
+                        <img src="img/osis.webp" alt="Footbar osis nesaba" class="hero-img">
+                        <div class="slide-caption">Footbar 1</div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/osispramuka.webp"
+                            alt="Kegiatan kolaborasi OSIS Nesaba dan Pramuka SMPN 01 Banjarharjo" class="hero-img">
+                        <div class="slide-caption">Footbar 2</div>
+                    </div>
+                    <div class="slide">
+                        <img src="img/latihan.webp" alt="Kegiatan latihan PBB osis nesaba" class="hero-img">
+                        <div class="slide-caption">Latihan PBB</div>
+                    </div>
+                </div>
+
+                <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+
+                <div class="dots-container">
+                    <span class="dot active" onclick="currentSlide(0)"></span>
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats reveal">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <h2 class="stat-number" data-target="90">0</h2>
+                <p class="stat-label">Siswa Terbantu</p>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-tasks"></i></div>
+                <h2 class="stat-number" data-target="15">0</h2>
+                <p class="stat-label">Program Kerja</p>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fa-solid fa-user-tie"></i></div>
+                <h2 class="stat-number" data-target="71">0</h2>
+                <p class="stat-label">Jumblah Pengurus</p>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-icon"><i class="fas fa-award"></i></div>
+                <h2 class="stat-number" data-target="5">0</h2>
+                <p class="stat-label">Penghargaan</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about reveal" id="profil">
+        <div class="about-container">
+            <div class="about-image">
+                <div class="image-wrapper">
+                    <img src="img/public.webp" alt="Kegiatan public speaking osis nesaba">
+                    <div class="experience-badge">
+                        <span>Est.</span>
+                        <p>2026</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-content">
+                <span class="sub-title">Mengenal Lebih Dekat</span>
+                <h2 class="section-title">Tentang <span>OSIS NESABA</span></h2>
+                <p class="about-text">
+                    OSIS SMPN 01 Banjarharjo (Nesaba) adalah organisasi wadah utama bagi siswa untuk mengembangkan
+                    potensi, kepemimpinan, dan kreativitas. Kami berdedikasi untuk menjadi jembatan aspirasi antara
+                    siswa dan pihak sekolah.
+                </p>
+                <p class="about-text">
+                    Dengan semangat gotong royong, kami berkomitmen menciptakan lingkungan sekolah yang aman, nyaman,
+                    dan penuh dengan prestasi baik di bidang akademik maupun non-akademik.
+                </p>
+
+                <div class="about-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Inovatif & Kreatif</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Kepemimpinan Berkarakter</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Solidaritas Tanpa Batas</span>
+                    </div>
+                </div>
+
+                <a href="#visi-misi" class="btn-primary">Visi & Misi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="visi-misi reveal" id="visi-misi">
+        <div class="vm-container">
+            <div class="visi-box">
+                <span class="sub-title">Cita-Cita Kami</span>
+                <h2 class="section-title">Visi <span>OSIS</span></h2>
+                <div class="visi-content">
+                    <p>"Mewujudkan OSIS yang GEMILANG "Gigih, Empati, Mandiri, Serta Langkah Nyata" demi terciptanya
+                        lingkungan sekolah yang inspiratif dan berintegritas."</p>
+                </div>
+            </div>
+
+            <div class="misi-box">
+                <span class="sub-title">Langkah Strategis</span>
+                <h2 class="section-title">Misi <span>Kami</span></h2>
+                <ul class="misi-list">
+                    <li>
+                        <div class="misi-number">01</div>
+                        <p>Meningkatkan Ketaqwaan: Menyelenggarakan kegiatan keagamaan yang inovatif untuk memperkuat karakter religius seluruh siswa.</p>
+                    </li>
+                    <li>
+                        <div class="misi-number">02</div>
+                        <p>Mengembangkan Potensi Siswa: Menjadi wadah bagi siswa dalam mengasah minat dan bakat, baik di bidang akademik, olahraga, maupun seni</p>
+                    </li>
+                    <li>
+                        <div class="misi-number">03</div>
+                        <p>Membangun Jiwa Kepemimpinan: Melatih kemandirian dan tanggung jawab siswa melalui manajemen organisasi yang solid dan transparan.</p>
+                    </li>
+                    <li>
+                        <div class="misi-number">04</div>
+                        <p>Aksi Nyata untuk Lingkungan: Berkontribusi positif dalam menjaga kebersihan, ketertiban, dan nama baik sekolah melalui program kerja yang konkret.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="org-structure reveal" id="struktur">
+        <div class="org-container">
+            <span class="sub-title">Manajemen Inti</span>
+            <h2 class="section-title">Struktur <span>Organisasi</span></h2>
+
+            <div class="tree-wrapper">
+                <div class="tree-level level-1">
+                    <div class="member-info">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <div class="member-text">
+                            <h3>DINDA MEGA</h3>
+                            <p>Ketua Umum</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-line"></div>
+
+                <div class="tree-level level-2">
+                    <div class="member-info">
+                        <div class="member-text">
+                            <h3>NATASYA KUSPITA</h3>
+                            <p>Wakil Ketua</p>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-text">
+                            <h3>SOLIKUL ULUM & JELITA IMELDA</h3>
+                            <p>Sekretaris Umum</p>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <div class="member-text">
+                            <h3>DRIA HARIANTO & RIANA AMELIA</h3>
+                            <p>Bendahara Umum</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tree-label-divider">Koordinator Seksi Bidang</div>
+
+                <div class="tree-level level-3">
+                    <div class="dept-item">
+                        <i class="fas fa-mosque"></i>
+                        <span>Sekbid 1</span>
+                        <small>Keimanan dan ketkwaan terhadap tuhan YME</small>
+                    </div>
+                    <div class="dept-item">
+                        <i class="fas fa-flag"></i>
+                        <span>Sekbid 2</span>
+                        <small>Kenegaraan dan nasionalisme</small>
+                    </div>
+                    <div class="dept-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Sekbid 3</span>
+                        <small>Wawasan kebangsaan dan bela Negara</small>
+                    </div>
+                    <div class="dept-item">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Sekbid 4</span>
+                        <small>Prestasi dan kemampuan Akademik</small>
+                    </div>
+                    <div class="dept-item">
+                        <i class="fas fa-crown"></i>
+                        <span>Sekbid 5</span>
+                        <small>Berjiwa kepemimpinan</small>
+                    </div>
+                    <div class="dept-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Sekbid 6</span>
+                        <small>Kreatifitas dan Kewirausahaan</small>
+                    </div>
+                    <div class="dept-item">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Sekbid 7</span>
+                        <small>Kebugaran jasmani dan rohani</small>
+                    </div>
+                </div>
+                <div class="more-info-area">
+                    <a href="pages/sekbid.html" class="learn-more-link">
+                        Pelajari Selengkapnya <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="proker reveal" id="program">
         <div class="proker-container">
             <span class="sub-title">Agenda Organisasi</span>
             <h2 class="section-title">Program <span>Kerja Unggulan</span></h2>
@@ -73,15 +352,181 @@
                         </button>
                     </div>
                 </div>
-                <a href="../index.html" class="btn-back-home">
-                    <div class="icon-circle">
-                        <i class="fas fa-arrow-left"></i>
-                    </div>
-                    <span>Kembali ke Beranda</span>
+            </div>
+            <div class="more-info-area">
+                <a href="pages/programkerja.html" class="learn-more-link">
+                    Pelajari Selengkapnya <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
+        </div>
+        </div>
     </section>
+
+    <section class="gallery reveal" id="galeri">
+        <div class="gallery-container">
+            <span class="sub-title">Dokumentasi</span>
+            <h2 class="section-title">Galeri <span>Dokumentasi kami</span></h2>
+
+            <div class="masonry-wrapper">
+                <div class="masonry-item">
+                    <img src="https://placehold.co/600x400/png"
+                        alt="Rapat OSIS">
+                    <div class="photo-info">Masukan Text</div>
+                </div>
+
+                <div class="masonry-item">
+                    <img src="https://placehold.co/400x600"
+                        alt="Kegiatan Belajar">
+                    <div class="photo-info">Masukan Text</div>
+                </div>
+
+                <div class="masonry-item">
+                    <img src="https://placehold.co/300x300" alt="Diskusi">
+                    <div class="photo-info">Masukan Text</div>
+                </div>
+
+                <div class="masonry-item">
+                    <img src="https://placehold.co/300x300"
+                        alt="Kebersamaan">
+                    <div class="photo-info">Masukan Text</div>
+                </div>
+                <div class="masonry-item">
+                    <img src="https://placehold.co/600x400"
+                        alt="Kebersamaan">
+                    <div class="photo-info">Masukan Text</div>
+                </div>
+                <div class="masonry-item">
+                    <img src="https://placehold.co/400x600"
+                        alt="Kebersamaan">
+                    <div class="photo-info">Masukan Text</div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="faq reveal" id="bantuan">
+        <div class="faq-container">
+            <span class="sub-title">Pusat Bantuan</span>
+            <h2 class="section-title">Pertanyaan <span>Populer</span></h2>
+
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Bagaimana cara bergabung menjadi pengurus OSIS?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Pendaftaran pengurus OSIS dibuka setiap awal tahun ajaran baru. Kamu bisa mengikuti seleksi
+                            administrasi, wawancara, dan LDKS yang akan diumumkan melalui website ini dan mading
+                            sekolah.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Apakah siswa kelas 7 bisa langsung mendaftar?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu saja! Kami sangat membuka kesempatan bagi adik-adik kelas 7 untuk mulai belajar
+                            berorganisasi sejak dini di OSIS Nesaba.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Ke mana saya harus mengirimkan saran untuk sekolah?</h3>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Kamu bisa menghubungi Seksi Bidang terkait atau langsung mengirimkan pesan melalui media
+                            sosial resmi OSIS Nesaba di TikTok atau Instagram.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="aspiration reveal" id="kontak">
+        <div class="aspiration-container">
+            <div class="aspiration-info">
+                <span class="sub-title">Suara Siswa</span>
+                <h2 class="section-title">Form <span>Aspirasi</span></h2>
+                <p>Punya ide keren untuk sekolah? Atau ada keluhan yang ingin disampaikan? Kirimkan aspirasimu di sini,
+                    kami siap mendengarkan!</p>
+
+                <div class="contact-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Ruang sekretariat osis</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>osisnesaba@gmail.com</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="aspiration-form">
+                <form id="contactForm">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Nama Lengkap" required>
+                        <input type="text" id="class" placeholder="Kelas (Contoh: 7B)" required>
+                    </div>
+                    <input type="text" id="subject" placeholder="Subjek Aspirasi" required>
+                    <textarea id="message" rows="5" placeholder="Tuliskan aspirasi atau saranmu di sini..."
+                        required></textarea>
+
+                    <button type="submit" class="btn-submit">
+                        <span>Kirim Aspirasi</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2 class="footer-logo">OSIS <span>Nesaba</span></h2>
+                <p>Wadah kreativitas, inovasi, dan aspirasi siswa SMPN 01 Banjarharjo. Bersama membangun sekolah yang
+                    lebih maju.</p>
+                <div class="footer-social">
+                    <a href="https://www.tiktok.com/@osis.nesaba24.25" class="social-icon"><i
+                            class="fab fa-tiktok"></i></a>
+                    <a href="https://www.instagram.com/OSIS SMPN 01 BANJARHARJO/" target="_blank" class="social-icon"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6285870438051?text=Ada saran!" class="social-icon"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h3>Navigasi</h3>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#profil">Visi Misi</a></li>
+                    <li><a href="#program">Program Kerja</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Hubungi Kami</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Jln. Raya Cikakak No. 12, Desa Cikakak, Kecamatan Banjarharjo,
+                    Kabupaten Brebes, Jawa Tengah.</p>
+                <p><i class="fas fa-envelope"></i> admin@nesaba.sch.id</p>
+                <p><i class="fas fa-phone"></i> 085870438051</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 OSIS Nesaba. Created with <i class="fas fa-heart"></i> by <span>Deryl</span></p>
+        </div>
+    </footer>
 
     <div id="prokerModal" class="modal">
         <div class="modal-content">
@@ -90,8 +535,159 @@
             </div>
         </div>
     </div>
-    
+
     <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            // Menampilkan menu
+            navMenu.classList.toggle('active');
+
+            // Animasi ikon hamburger
+            hamburger.classList.toggle('toggle');
+        });
+
+        // Menutup menu secara otomatis saat salah satu link diklik
+        document.querySelectorAll('.nav-link, .nav-cta').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('toggle');
+            });
+        });
+
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+
+        function showSlides(n) {
+            if (n >= slides.length) { currentSlideIndex = 0; }
+            if (n < 0) { currentSlideIndex = slides.length - 1; }
+
+            // Sembunyikan semua slide
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            // Tampilkan slide yang dipilih
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function changeSlide(n) {
+            showSlides(currentSlideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(currentSlideIndex = n);
+        }
+
+        // Otomatis ganti foto setiap 5 detik
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
+
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200; // Semakin kecil angka, semakin cepat
+
+        const startCounter = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Menjalankan animasi saat section terlihat di layar (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    startCounter();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(document.querySelector('.stats'));
+
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+
+            reveals.forEach((element) => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+                const elementVisible = 100; // Sensitivitas kemunculan
+
+                // Jika bagian atas elemen masuk ke layar
+                if (elementTop < windowHeight - elementVisible && elementBottom > 0) {
+                    element.classList.add("active");
+                }
+                // Jika elemen keluar dari layar (scroll jauh ke atas atau bawah)
+                else {
+                    element.classList.remove("active");
+                }
+            });
+        }
+
+        // Pantau setiap kali scroll
+        window.addEventListener("scroll", reveal);
+
+        // Cek posisi saat pertama kali halaman dibuka
+        reveal();
+
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+
+            question.addEventListener('click', () => {
+                // Menutup FAQ lain yang mungkin masih terbuka (opsional)
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+
+                // Buka/Tutup item yang diklik
+                item.classList.toggle('active');
+            });
+        });
+
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Animasi tombol saat loading
+            const btn = this.querySelector('.btn-submit');
+            const originalText = btn.innerHTML;
+
+            btn.innerHTML = '<span>Mengirim...</span> <i class="fas fa-spinner fa-spin"></i>';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            // Simulasi pengiriman (nantinya bisa kamu hubungkan ke API/Backend)
+            setTimeout(() => {
+                alert('Terima kasih! Aspirasimu telah kami terima.');
+                btn.innerHTML = originalText;
+                btn.style.opacity = '1';
+                btn.disabled = false;
+                this.reset(); // Kosongkan form kembali
+            }, 2000);
+        });
+
         const modal = document.getElementById("prokerModal");
         const closeModal = document.querySelector(".close-modal");
 
@@ -133,9 +729,20 @@
             }
         }
 
+        const lineV = document.createElement("div");
+const lineH = document.createElement("div");
+lineV.classList.add("cursor-line-v");
+lineH.classList.add("cursor-line-h");
+document.body.appendChild(lineV);
+document.body.appendChild(lineH);
+
+window.addEventListener("mousemove", (e) => {
+    lineV.style.left = e.clientX + "px";
+    lineH.style.top = e.clientY + "px";
+});
+
         closeModal.onclick = closeProkerModal;
     </script>
-
 </body>
 
 </html>
