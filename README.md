@@ -1,2 +1,9 @@
-# Website-Osis-Nesaba-By-Deryl
-ini adalah website osis nesaba SMPN 01 BANJARHARJO dibuat oleh Deryl dengan penuh hati
+# Website Resmi OSIS Nesaba
+Project website organisasi siswa SMPN 01 Banjarharjo.
+
+## Fitur:
+- Tab System Seksi Bidang
+- Modal Detail Program Kerja
+- Responsive Design (Mobile Friendly)
+
+**Developer:** Deryl (7B)
