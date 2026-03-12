@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program kerja osis Nesaba</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <section class="proker" id="program">
+        <div class="proker-container">
+            <span class="sub-title">Agenda Organisasi</span>
+            <h2 class="section-title">Program <span>Kerja Kami</span></h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Tanggal 9 - 12 Maret 2026</div>
+                    <div class="timeline-content">
+                        <div class="status-badge status-ongoing">Sedang Terlaksanakan</div>
+                        <h3>Takjil Gratis</h3>
+                        <p>Kegiatan berbagi makanan berbuka puasa kepada pengendara dan warga di sekitar SMPN 01
+                            Banjarharjo.</p>
+                        <button class="view-detail" onclick="showDetail(
+    'Takjil Gratis', 
+    'Kegiatan berbagi makanan berbuka puasa kepada pengendara dan warga di sekitar SMPN 01 Banjarharjo.', 
+    '9 - 11 Maret, Ramadhan 1447H', 
+    '15:30 WIB - Selesai'
+)">
+                            Lihat Detail <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Masukan tanggal II</div>
+                    <div class="timeline-content">
+                        <div class="status-badge status-ongoing">Sedang Terlaksanakan</div>
+                        <h3>Pesantren Kilat</h3>
+                        <p>"Kegiatan rutin tahunan di bulan suci Ramadhan untuk memperkuat iman, memperdalam wawasan
+                            keagamaan, serta membentuk karakter siswa yang berakhlak mulia melalui kajian dan ibadah
+                            bersama."</p>
+                        <button class="view-detail" onclick="showDetail(
+    'Pesantren kilat', 
+    'Kegiatan rutin tahunan di bulan suci Ramadhan untuk memperkuat iman memperdalam wawasan keagamaan serta membentuk karakter siswa yang berakhlak mulia melalui kajian dan ibadah bersama.', 
+    '9 - 12 Maret, Ramadhan 1447H', 
+    '07:15 WIB - 12.00 WIB'
+)">
+                            Lihat Detail <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Masukan tanggal III</div>
+                    <div class="timeline-content">
+                        <div class="status-badge status-upcoming">Segera Hadir</div>
+                        <h3>Halal bihalal</h3>
+                        <p>"Momen silaturahmi dan saling memaafkan antar siswa, guru, dan seluruh warga sekolah untuk
+                            mempererat tali persaudaraan setelah perayaan Hari Raya Idulfitri."</p>
+                        <button class="view-detail" onclick="showDetail(
+    'Halal bihalal', 
+    'Momen silaturahmi dan saling memaafkan antar siswa, guru, dan seluruh warga sekolah untuk mempererat tali persaudaraan setelah perayaan Hari Raya Idulfitri.', 
+    'undifined', 
+    'undifined - undefined'
+)">
+                            Lihat Detail <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <a href="../index.html" class="btn-back-home">
+                    <div class="icon-circle">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <span>Kembali ke Beranda</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div id="prokerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-data">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        const modal = document.getElementById("prokerModal");
+        const closeModal = document.querySelector(".close-modal");
+
+        // Fungsi untuk membuka modal dengan data tertentu
+        function showDetail(title, desc, date, time) {
+            const modalData = document.getElementById("modal-data");
+
+            modalData.innerHTML = `
+        <div class="modal-info">
+            <span class="badge-status">Agenda Organisasi</span>
+            <h2>${title}</h2>
+            
+            <div class="schedule-info">
+                <p><i class="far fa-calendar-alt"></i> <strong>Tanggal:</strong> ${date}</p>
+                <p><i class="far fa-clock"></i> <strong>Waktu:</strong> ${time}</p>
+            </div>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 20px 0;">
+            
+            <div class="description-box">
+                <p>${desc}</p>
+            </div>
+            
+            <button class="btn-submit" onclick="closeProkerModal()" style="margin-top: 20px;">Tutup</button>
+        </div>
+    `;
+
+            document.getElementById("prokerModal").style.display = "block";
+        }
+
+        function closeProkerModal() {
+            modal.style.display = "none";
+        }
+
+        // Tutup modal jika klik di luar kotak putih
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                closeProkerModal();
+            }
+        }
+
+        closeModal.onclick = closeProkerModal;
+    </script>
+
+</body>
+
+</html>

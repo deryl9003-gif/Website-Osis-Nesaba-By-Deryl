@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Struktur Seksi Bidang - OSIS Nesaba</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<style>
+    .tab-btn {
+    padding: 12px 20px;
+    border: none;
+    background: rgba(9, 132, 227, 0.1);
+    color: #0984e3;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: #0984e3;
+    color: white;
+}
+
+.tab-content {
+    display: none; /* Sembunyikan semua secara default */
+    animation: fadeIn 0.5s ease;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 1, 0, 0.34);
+}
+
+.tab-content.active {
+    display: block; /* Tampilkan yang aktif */
+}
+
+.content-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.content-header i { font-size: 3rem; color: #0984e3; margin-bottom: 15px; }
+
+.leader-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.leader {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: 700;
+    color: #636e72;
+}
+
+.leader span { display: block; font-size: 0.8rem; color: black; margin-bottom: 5px; }
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.member {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Berikan padding-top yang cukup besar agar tidak tertutup tombol fixed */
+.sekbid-center {
+    padding: 120px 0 80px; /* 120px di atas memberikan ruang untuk tombol & navbar */
+    background: #f9f9f9;
+    min-height: 100vh;
+}
+
+/* Pastikan container memiliki margin yang pas */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Atur ulang tombol kembali agar z-index nya tidak mengganggu klik tab */
+.btn-back-home {
+    z-index: 1001; /* Tetap di atas tapi tidak menghalangi elemen judul */
+}
+
+/* Rapikan margin Judul */
+.section-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Tambahkan ini jika tab-navigation masih terlalu dekat dengan judul */
+.tab-navigation {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    .sekbid-center {
+        padding-top: 100px; /* Sedikit lebih kecil di HP */
+    }
+    .tab-navigation {
+        gap: 5px; /* Tombol sekbid lebih rapat di HP */
+    }
+    .tab-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+</style>
+    <a href="../index.html" class="btn-back-home">
+        <div class="icon-circle"><i class="fas fa-arrow-left"></i></div>
+        <span>Kembali ke Beranda</span>
+    </a>
+
+    <section class="sekbid-center">
+    <div class="container">
+        <h2 class="section-title">Detail <span>Seksi Bidang</span></h2>
+        
+        <div class="tab-navigation">
+            <button class="tab-btn active" onclick="openSekbid(event, 'sekbid1')">Sekbid 1</button>
+            <button class="tab-btn" onclick="openSekbid(event, 'sekbid2')">Sekbid 2</button>
+            <button class="tab-btn" onclick="openSekbid(event, 'sekbid3')">Sekbid 3</button>
+            <button class="tab-btn" onclick="openSekbid(event, 'sekbid4')">Sekbid 4</button>
+            <button class="tab-btn" onclick="openSekbid(event, 'sekbid5')">Sekbid 5</button>
+            <button class="tab-btn" onclick="openSekbid(event, 'sekbid6')">Sekbid 6</button>
+            <button class="tab-btn" onclick="openSekbid(event, 'sekbid7')">Sekbid 7</button>
+        </div>
+
+        <div id="sekbid-content-area">
+            <div id="sekbid1" class="tab-content active">
+                <div class="content-header">
+                    <i class="fas fa-mosque"></i>
+                    <h3>Keimanan dan Ketakwaan Terhadap Tuhan YME</h3>
+                </div>
+                <div class="leader-box">
+                    <div class="leader"><span>Ketua:</span> Dhea Angelita</div>
+                    <div class="leader"><span>Wakil Ketua:</span> Silvi Septiani</div>
+                </div>
+                <div class="member-grid">
+                    <div class="member">Cahyanti</div>
+                    <div class="member">Fitria Nur F</div>
+                    <div class="member">Rangga Dwi Hermawan</div>
+                    <div class="member">Raka Rohana</div>
+                    <div class="member">Nur Afifah</div>
+                    <div class="member">Tanra Megan N</div>
+                    <div class="member">Gila Meliana P.</div>
+                </div>
+            </div>
+
+            <div id="sekbid2" class="tab-content">
+                <div class="content-header">
+                    <i class="fas fa-flag"></i>
+                    <h3>Kenegaraan dan Nasionalisme</h3>
+                </div>
+                <div class="leader-box">
+                    <div class="leader"><span>Ketua:</span> Fani Rahmawati</div>
+                    <div class="leader"><span>Wakil Ketua:</span> Arifin Ilham</div>
+                </div>
+                <div class="member-grid">
+                    <div class="member">Adista</div>
+                    <div class="member">Azril Alga R.</div>
+                    <div class="member">Tasya Widia Putri</div>
+                    <div class="member">Delia Anggraeni P.</div>
+                    <div class="member">Melvina Ulmatun N.</div>
+                    <div class="member">Aldiansyah Nugraha</div>
+                    <div class="member">Tirta Afandi</div>
+                    <div class="member">Deryl Naufal Z</div>
+                </div>
+            </div>
+
+<div id="sekbid3" class="tab-content">
+            <div class="content-header">
+              <i class="fas fa-shield-alt"></i>
+              <h3>Kepribadian Unggul, Wawasan Kebangsaan, dan Bela Negara</h3>
+            </div>
+            <div class="leader-box">
+              <div class="leader"><span>Ketua:</span> Rangga</div>
+              <div class="leader"><span>WK:</span> Sofia Novita</div>
+            </div>
+            <div class="member-grid">
+              <div class="member">Hasanah Nur A.</div>
+              <div class="member">Anindya Putri G.</div>
+              <div class="member">Schyall Syabilla A. F.</div>
+              <div class="member">Jinan Untung S.</div>
+              <div class="member">Keyvin Safrudin</div>
+              <div class="member">ziah Ratu Sifa</div>
+              <div class="member">Renita Rahma D.</div>
+            </div>
+          </div>
+
+          <div id="sekbid4" class="tab-content">
+            <div class="content-header">
+              <i class="fas fa-graduation-cap"></i>
+              <h3>Prestasi Akademik, Seni, dan Olahraga</h3>
+            </div>
+            <div class="leader-box">
+              <div class="leader"><span>Ketua:</span> Dwi Nur Hasanah</div>
+              <div class="leader"><span>WK:</span> Nacella Irine P.</div>
+            </div>
+            <div class="member-grid">
+              <div class="member">Wina Fa'alnaz</div>
+              <div class="member">Wildan Alika</div>
+              <div class="member">Niken Wijayanti</div>
+              <div class="member">Naufal Faiz Z.</div>
+              <div class="member">Nayla Rizqiyah</div>
+              <div class="member">Alvin Zidan Nur F.</div>
+              <div class="member">Yuanita Andara F.</div>
+            </div>
+          </div>
+
+          <div id="sekbid5" class="tab-content">
+            <div class="content-header">
+              <i class="fas fa-users"></i>
+              <h3>Demokrasi dan Hak Asasi Manusia</h3>
+            </div>
+            <div class="leader-box">
+              <div class="leader"><span>Ketua:</span> Audi Saharani</div>
+              <div class="leader"><span>WK:</span> Tisna Nur Iman</div>
+            </div>
+            <div class="member-grid">
+              <div class="member">Yuanita Ardelia</div>
+              <div class="member">Excell Scooterisa P.</div>
+              <div class="member">Sem Dwi Ardiansyah</div>
+              <div class="member">Amanda Sabrina</div>
+              <div class="member">Khanza Salsabila P.</div>
+              <div class="member">Nabil Aydin</div>
+              <div class="member">Widi Febrian S.</div>
+            </div>
+          </div>
+
+          <div id="sekbid6" class="tab-content">
+            <div class="content-header">
+              <i class="fas fa-lightbulb"></i>
+              <h3>Kreativitas, Keterampilan, dan Kewirausahaan</h3>
+            </div>
+            <div class="leader-box">
+              <div class="leader"><span>Ketua:</span> Khaira Ainul Azki</div>
+              <div class="leader"><span>WK:</span> Silvia Khoirunnisa</div>
+            </div>
+            <div class="member-grid">
+              <div class="member">Sabina Alika</div>
+              <div class="member">Naura Malika T.</div>
+              <div class="member">Cici Haerlinda</div>
+              <div class="member">Irwansyah S.</div>
+              <div class="member">Lutfi Nur Hasan</div>
+              <div class="member">Maritza Danastri A.</div>
+              <div class="member">Zahran Baskara</div>
+            </div>
+          </div>
+
+          <div id="sekbid7" class="tab-content">
+            <div class="content-header">
+              <i class="fas fa-dumbbell"></i>
+              <h3>Kebugaran Jasmani dan Rohani</h3>
+            </div>
+            <div class="leader-box">
+              <div class="leader"><span>Ketua:</span> Rara Krasiva Wilda</div>
+              <div class="leader"><span>WK:</span> Syahfatudiana Al-fadiyah</div>
+            </div>
+            <div class="member-grid">
+              <div class="member">Jhaki Khafi Nur F.</div>
+              <div class="member">Sherin Aulia</div>
+              <div class="member">Rafanra Rizky</div>
+              <div class="member">Dona Selma Tiara</div>
+              <div class="member">Agung Heryana</div>
+              <div class="member">Zahra Amelia</div>
+              <div class="member">Zaky Nur A.</div>
+            </div>
+          </div>
+
+      </div>
+</section>
+<script>
+    function openSekbid(evt, sekbidName) {
+    var i, tabContent, tabBtns;
+
+    // Sembunyikan semua konten
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].classList.remove("active");
+    }
+
+    // Hilangkan class active dari semua tombol
+    tabBtns = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tabBtns.length; i++) {
+        tabBtns[i].classList.remove("active");
+    }
+
+    // Tampilkan konten yang dipilih dan tambah class active ke tombol
+    document.getElementById(sekbidName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
+</body>
+</html>

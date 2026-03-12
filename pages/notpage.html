@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seksi Bidang - OSIS Nesaba</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<style>
+    /* Styling Halaman Under Construction */
+.construction-body {
+    background: linear-gradient(135deg, #0984e3 0%, #74b9ff 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.construction-container {
+    width: 90%;
+    max-width: 500px;
+}
+
+.construction-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px 30px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.icon-box {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+.construction-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.construction-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* Animasi Loading Sederhana */
+.loading-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.bar-progress {
+    width: 60%; /* Persentase progress */
+    height: 100%;
+    background: white;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: white;
+    color: #0984e3;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-back:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Animasi */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+    from { opacity: 0.5; }
+    to { opacity: 1; }
+}
+</style>
+<body class="construction-body">
+
+    <div class="construction-container">
+        <div class="construction-card">
+            <div class="icon-box">
+                <i class="fas fa-tools"></i>
+            </div>
+            <h1>Maaf yah, bagian ini belum jadi 🙏</h1>
+            <p>Sabar ya! Kami sedang merapikan konten dan menunggu koordinasi dengan Ketua OSIS agar informasinya lebih akurat.</p>
+            
+            <div class="loading-bar">
+                <div class="bar-progress"></div>
+            </div>
+
+            <a href="../index.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
